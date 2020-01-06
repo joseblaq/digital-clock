@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body,
+html {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: linear-gradient(#000000, #333333);
+    color: whitesmoke;
+}
+
+.container {
+    /* using em for paddind and mergin */
+    /* using rem unit for font size to style letter */
+    padding: 3em 1.5em;
+    background-image: linear-gradient(rgb(3, 56, 53), rgb(8, 57, 121));
+    border-radius: 40% 20% 50% 57% / 34% 35% 60% 49%;
+    /* animatinn defination... */
+    animation: clock 4s infinite .5s;
+}
+
+
+/* animating with keyframe */
+
+@keyframes clock {
+    0% {
+        border-radius: 40% 20% 50% 57% / 34% 35% 60% 49%;
+    }
+    25% {
+        border-radius: 40% 20% 50% 47% / 74% 35% 60% 49%;
+        /* animating the date  */
+        box-shadow: 3px 4px 7px lime;
+    }
+    50% {
+        border-radius: 40% 60% 50% 57% / 34% 65% 50% 49%;
+        box-shadow: 3px 4px 7px rgb(10, 238, 10);
+    }
+    75% {
+        border-radius: 40% 50% 60% 77% / 30% 45% 65% 59%;
+        box-shadow: 3px 4px 7px rgb(9, 163, 4);
+    }
+    100% {
+        border-radius: 40% 20% 50% 57% / 34% 35% 60% 49%;
+        box-shadow: 3px 4px 7px rgba(8, 206, 24, 0.849);
+    }
+}
+
+.time {
+    font-size: 4.0rem;
+    text-shadow: 4px 4px #000000;
+}
+
+.date {
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 4px 3px rgba(151, 7, 91, 0.5);
+    text-transform: uppercase;
+    font-family: 'Ma Shan Zheng', cursive;
+}
